@@ -1,4 +1,4 @@
-package week2AssignmentDay1;
+package Selenium_Assignment;
 /*Assignment:5
 =========
 Create Class Student

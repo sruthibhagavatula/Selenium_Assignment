@@ -1,4 +1,4 @@
-package week1.day1;
+package Selenium_Assignment;
 
 /*//Assignment 4:
 ========== 

@@ -1,4 +1,4 @@
-package week1.day1;
+package Selenium_Assignment;
 /*Assignment 2:
 
 - Create package name as week1.day1 under src/main/java

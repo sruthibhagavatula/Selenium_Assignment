@@ -1,4 +1,4 @@
-package week1Assignment;
+package Selenium_Assignment;
 
 public class IsPrime {
 

@@ -1,4 +1,4 @@
-package week1.day1;
+package Selenium_Assignment;
 
 public class Bike {
 	public static void main(String[] args)

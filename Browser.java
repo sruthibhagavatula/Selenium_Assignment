@@ -1,4 +1,4 @@
-package week2AssignmentDay1;
+package Selenium_Assignment;
 
 import week1.day1.Chrome;
 

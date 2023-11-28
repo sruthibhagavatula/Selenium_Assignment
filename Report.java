@@ -1,4 +1,4 @@
-package week2AssignmentDay1;
+package Selenium_Assignment;
 
 public class Report {
 	public static void main(String[] args) {
