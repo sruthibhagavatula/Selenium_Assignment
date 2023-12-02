@@ -1,8 +1,10 @@
 package Selenium_Assignment;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class LeafTaps_CreateLead {
 
@@ -21,9 +23,20 @@ public class LeafTaps_CreateLead {
 		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("Testing");
 		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Sruthi");
 		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("bhagavatula");
+		WebElement source=  driver.findElement(By.id("createLeadForm_dataSourceId"));
+		Select sel = new Select(source);
+		sel.selectByIndex(3);
+		WebElement marketing = driver.findElement(By.id("createLeadForm_marketingCampaignId"));
+		Select sel1 = new Select(marketing);
+		sel1.selectByVisibleText("Automobile");
+	
+		
+		
 		driver.findElement(By.name("submitButton")).click();
 
-		driver.close();
+		System.out.println(driver.getTitle());
+		
 	}
+	
 
 }
