@@ -27,6 +27,24 @@ public class DeleteLeadLeafTap {
 		Thread.sleep(5000);
 		String firstCellValue = driver.findElement(By.xpath("//span[text()='Lead List']//following::table//..//..//following::tbody//td[1]//a")).getText();
 		System.out.println(firstCellValue);
+		driver.findElement(By.xpath("//span[text()='Lead List']//following::table//..//..//following::tbody//td[1]//a")).click();
+		driver.findElement(By.linkText("Delete")).click();
+driver.findElement(By.linkText("Find Leads")).click();
+		
+		driver.findElement(By.xpath("//span[text()='Phone']")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.findElement(By.xpath("//span[text()='Find by']//following::label[text()='Phone Number:']//following::input[@name='phoneNumber']")).sendKeys("96427");
+		driver.findElement(By.xpath("//span[text()='Find by']//following::label[text()='Phone Number:']//following::input[@name='phoneNumber']//following::button[text()='Find Leads']")).click();
+		Thread.sleep(5000);
+		boolean textIsDisplayed = driver.findElement(By.xpath("//span[text()='Lead List']//following::table//..//..//following::tbody//td[1]//following::div[text()='No records to display']")).isDisplayed();
+		if(textIsDisplayed==true)
+		{
+			System.out.println("Required message is displayed");
+		}
+		else
+			System.out.println("Required message is not displayed");
+		
+		driver.close();
 	}
 		
 }
